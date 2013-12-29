@@ -1,0 +1,54 @@
+<?xml version = "1.0" encoding="windows-1250"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html; charset=windows-1250"/>
+        <title>Zpracování HTTP žádosti GET</title>
+    </head>
+
+    <body>
+        <!-- Formulář pro odeslání dat do servletu metodou get.
+        Servlet se vyvolá při přístupu na URL
+        http://localhost:8084/2A_DU5/get -->
+
+        <form action = "/DU5/" method = "get">
+            <p>
+                <label>
+                    <!--
+                    <input type="text" name="meno"/><br/>
+                    PRIEZVISKO:
+                    <input type="text" name="priezvisko"/><br/>
+                    ROK NARODENIA:
+                    <input type="number" name="rok"/><br/>
+                    -->
+                    FONT COLOR      :      
+                    <input type="radio" name="fc" value="BLACK" checked="true"/>black
+                    <input type="radio" name="fc" value="BLUE"/>blue
+                    <input type="radio" name="fc" value="WHITE"/>white<br/><br/>
+
+                    BACKGROUND COLOR:
+                    <input type="radio" name="bc" value="WHITE" checked="true"/>white
+                    <input type="radio" name="bc" value="BLACK"/>black
+                    <input type="radio" name="bc" value="YELLOW"/>yellow<br/><br/>
+
+                    FONT SIZE       :     
+                    <input type="radio" name="fs" value="8" checked="true"/>8
+                    <input type="radio" name="fs" value="5"/>5
+                    <input type="radio" name="fs" value="3"/>3<br/><br/>
+
+                    <!--odoslanie formularu: -->
+                    <input type="submit" value="Odeslat Formular"/>
+                </label>
+            </p>
+        </form>
+        <font size="3">
+        <p>
+            <a href="http://localhost:8080/DU5/cookie1">str1</a>
+            <a href="http://localhost:8080/DU5/cookie2">str2</a>
+        </p>
+        </font>
+    </body>
+
+</html>
