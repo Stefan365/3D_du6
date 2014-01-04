@@ -2,11 +2,9 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /*
  * To change this template, choose Tools | Templates and open the template in
@@ -24,24 +22,12 @@ public class CookieServlet_1 extends HttpServlet {
         HttpServletResponse response) throws ServletException,
         IOException {
 
-        //přečtení parametru od klienta. zakladne nastavenie, pokial nebude ine z cookies, resp. formulara
         
         
         // příprava odpovědi pro klienta
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
 
-        HttpSession session = request.getSession();
-		Integer pocet = (Integer) session.getAttribute("pocet");
-		if (pocet == null) {
-			pocet = new Integer(1);
-		} else {
-			pocet = new Integer(pocet.intValue() + 1);
-		}
-		session.setAttribute("pocet", pocet);
-        
-        
-        
         //tvorba těla odpovědi
         PrintWriter out = response.getWriter();
 
@@ -65,8 +51,6 @@ public class CookieServlet_1 extends HttpServlet {
 "                        <input type=\"submit\" value=\"Odeslat\"/>\n" +
 "                    </label>\n" +
 "\n" +
-"                    <a href=\"http://localhost:8080/DU6/druhy\">CZ</a>\n" +
-"                    <a href=\"http://localhost:8080/DU6/druhy\">EN</a>\n" +
 "                </p>\n" +
 "            </font>\n" +
 "\n" +
