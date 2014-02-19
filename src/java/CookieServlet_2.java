@@ -4,16 +4,11 @@ import java.io.PrintWriter;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/*
- * To change this template, choose Tools | Templates and open the template in
- * the editor.
- */
 /**
  * Použití cookies pro počítání přístupů daného klienta na webový server.
  *
@@ -58,8 +53,6 @@ public class CookieServlet_2 extends HttpServlet {
             hello = "" + usaTexty.getString("hello_world");
         } 
 
-        //...je tu stale este moznost, ze su k dispozicii cookies:
-        //Cookie[] mySiteCookies = request.getCookies();
 
         // příprava odpovědi pro klienta
         response.setContentType("text/html");
@@ -75,7 +68,7 @@ public class CookieServlet_2 extends HttpServlet {
         out.println("<p><br/>");
         out.println("ID: " + sessionA.getId()+"<br/>");
         out.println("JAZ: *" + sessionA.getAttribute("jazyk")+"*<br/>");
-        out.println("Text: " + hello + "</p><br/>");
+        out.println("TextA: " + hello + "</p><br/>");
         
         
         //odakz na stranku zpet:
