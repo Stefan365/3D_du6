@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Použití cookies pro počítání přístupů daného klienta na webový server.
  *
- * @author Jaroslav Srp
+ * @author Stefan Veres
  */
 public class CookieServlet_1 extends HttpServlet {
 

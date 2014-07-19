@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Použití cookies pro počítání přístupů daného klienta na webový server.
  *
- * @author Jaroslav Srp
+ * @author Stefan Veres
  */
 public class CookieServlet_3 extends HttpServlet {
 
